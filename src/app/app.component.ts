@@ -29,7 +29,8 @@ export class AppComponent {
   }
 
   get token(){
-    let claims:any = this.oauthService.getIdentityClaims();
+    let claims:any = this.oauthService.getIdentityClaims();    
+    console.log(`claims : ${JSON.stringify(claims)}`);
     return claims ? claims : null;
   }
 }
